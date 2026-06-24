@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machinoza Engineering (PVT) LTD | Electrical, Automation & CCTV Services Sri Lanka</title>
+    <meta name="description" content="Machinoza provides expert electrical services, security solutions including CCTV and alarm systems, smart home and industrial automation, PA sound systems, networking, and LED sign boards. Your trusted partner for innovative solutions.">
+    <meta name="keywords" content="m,machi,ma,near colombo,colombo,electrical,, electrical services, security solutions, automation, smart home, industrial automation, Sri Lanka, electrician, CCTV, security systems,Colombo,electrician,electrical company,near colombo,sri lanka,electrician near colombo">
+    <meta name="author" content="Machinoza">
+    <meta property="og:title" content="Machinoza - Innovative Solutions for a Smarter Future">
+    <meta property="og:description" content="Your trusted partner for innovative electrical, security, and automation solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://machinoza.com/"> 
+    <meta property="og:image" content="https://placehold.co/1200x630/007bff/ffffff?text=Machinoza%20Home%20Page"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Font - Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light background for the whole page */
+            overflow-x: hidden; /* Prevents horizontal scroll issues on mobile */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Hero Slider specific styles */
+        .slider-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; 
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out; 
+            object-fit: cover; 
+            object-position: center; 
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        /* --- Modern Tech Font & Professional Animation --- */
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.10em; /* Slightly reduced for better mobile fit */
+        }
+
+        @keyframes professionalFocus {
+            0%, 20%, 100% { 
+                transform: translateY(0) scale(1);
+                color: #374151; 
+                text-shadow: none;
+            }
+            7%, 13% { 
+                transform: translateY(-4px) scale(1.05); 
+                color: #2563eb; 
+                text-shadow: 0 0 15px rgba(37, 99, 235, 0.4); 
+            }
+        }
+
+        .animate-word {
+            display: inline-block;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: professionalFocus 10s infinite;
+        }
+
+        .word-1 { animation-delay: 0s; }
+        .word-2 { animation-delay: 2.5s; }
+        .word-3 { animation-delay: 5s; }
+        .word-4 { animation-delay: 7.5s; }
+
+        /* FAQ Accordion Styles */
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary {
+            list-style: none;
+        }
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            line-height: 1;
+            color: #4b5563; 
+        }
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+<header class="bg-white shadow-lg py-4 sticky top-0 z-50">
+    <nav class="container mx-auto px-4 flex justify-between items-center">
+
+        <div class="flex items-center gap-1">
+            <a href="index.html">
+                <img src="asserts/logo.png" alt="Machinoza Logo" class="h-12 md:h-16 w-auto" onerror="this.src='https://placehold.co/150x50/ffffff/000000?text=LOGO'">
+            </a>
+
+            <div class="border-l-4 border-blue-600 pl-4 md:pl-6 ml-2">
+                <h1 class="text-base md:text-xl font-bold uppercase tech-font leading-tight flex flex-wrap">
+                    <span class="animate-word word-1 mr-2 md:mr-3">Machinoza</span>
+                    <span class="animate-word word-2 mr-2 md:mr-3">Engineering</span>
+                    <span class="animate-word word-3 text-blue-600 mr-2 md:mr-3">PVT</span>
+                    <span class="animate-word word-4 text-blue-600">LTD</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-blue-700 font-medium transition duration-300">Home</a>
+            <a href="services.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Services</a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Projects</a>
+            <a href="about.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">About Us</a>
+            <a href="contact.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Contact</a>
+        </div>
+
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-md">
+        <a href="index.html" class="block px-4 py-2 text-blue-700 hover:bg-gray-100">Home</a>
+        <a href="services.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Services</a>
+        <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Projects</a>
+        <a href="about.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About Us</a>
+        <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+    </div>
+</header>
+
+<main>
+    <section id="home" class="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 md:py-32 overflow-hidden">
+        <div class="slider-container">
+            <img src="asserts/1 new.jpg" class="slide active" alt="Machinoza Project Image 1" onerror="this.src='https://placehold.co/1920x1080/007bff/ffffff?text=Slide+1'">
+            <img src="asserts/s2.jpg" class="slide active" alt="Machinoza Project Image 2" onerror="this.src='https://placehold.co/1920x1080/0056b3/ffffff?text=Slide+2'">
+            <img src="asserts/s3.jpg" class="slide active" alt="Machinoza Project Image 3" onerror="this.src='https://placehold.co/1920x1080/003d82/ffffff?text=Slide+3'">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up" style="text-shadow: 4px 4px 15px rgba(0,0,0,0.8);">
+                Innovative Solutions for a Smarter Future
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-200" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.8);">
+                Machinoza provides comprehensive Electrical, Security, Plumbing and Automation services tailored to your domestic and industrial needs.
+            </p>
+            <a href="services.html" class="inline-block bg-white text-blue-700 hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transform hover:scale-105 transition duration-300 animate-fade-in-up delay-400">
+                Explore Our Services
+            </a>
+        </div> 
+    </section>
+
+    <section id="faq" class="py-16 bg-[#f8f9fa]">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600">Everything you need to know about working with Machinoza.</p>
+            </div>
+    
+            <div class="space-y-10">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">General Inquiries</h3>
+                    
+                    <details class="faq-item group mb-4 border border-gray-200 rounded-lg bg-white shadow-sm overflow-hidden">
+                        <summary class="font-semibold p-5 cursor-pointer focus:outline-none hover:bg-gray-50 flex justify-between items-center transition-colors duration-200">
+                            What services does Machinoza provide?
+                        </summary>
+                        <div class="p-5 text-gray-600 border-t border-gray-200 bg-white">
+                            <p>We are a comprehensive service provider specializing in electrical wiring, CCTV installation and smart automation systems for both residential and commercial properties. We also offer specialized design and installation for custom projects like fountain and pond lighting.</p>
+                        </div>
+                    </details>
+    
+                    <details class="faq-item group mb-4 border border-gray-200 rounded-lg bg-white shadow-sm overflow-hidden">
+                        <summary class="font-semibold p-5 cursor-pointer focus:outline-none hover:bg-gray-50 flex justify-between items-center transition-colors duration-200">
+                            What areas do you serve?
+                        </summary>
+                        <div class="p-5 text-gray-600 border-t border-gray-200 bg-white">
+                            <p>We proudly serve clients throughout Colombo and the greater Western Province area. If you are located outside this region, please contact us to discuss project feasibility.</p>
+                        </div>
+                    </details>
+                </div>
+    
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">Electrical & Automation</h3>
+                    
+                    <details class="faq-item group mb-4 border border-gray-200 rounded-lg bg-white shadow-sm overflow-hidden">
+                        <summary class="font-semibold p-5 cursor-pointer focus:outline-none hover:bg-gray-50 flex justify-between items-center transition-colors duration-200">
+                            Do you handle full home rewiring?
+                        </summary>
+                        <div class="p-5 text-gray-600 border-t border-gray-200 bg-white">
+                            <p>Yes, we manage everything from minor electrical repairs to complete property rewiring, ensuring everything is up to code, safe, and built to handle your power requirements.</p>
+                        </div>
+                    </details>
+    
+                    <details class="faq-item group mb-4 border border-gray-200 rounded-lg bg-white shadow-sm overflow-hidden">
+                        <summary class="font-semibold p-5 cursor-pointer focus:outline-none hover:bg-gray-50 flex justify-between items-center transition-colors duration-200">
+                            What kind of smart automation systems do you install?
+                        </summary>
+                        <div class="p-5 text-gray-600 border-t border-gray-200 bg-white">
+                            <p>We install modern automation solutions that allow you to control lighting, climate, security, and access from your smartphone or central control panel, streamlining both homes and commercial spaces.</p>
+                        </div>
+                    </details>
+    
+                    <details class="faq-item group mb-4 border border-gray-200 rounded-lg bg-white shadow-sm overflow-hidden">
+                        <summary class="font-semibold p-5 cursor-pointer focus:outline-none hover:bg-gray-50 flex justify-between items-center transition-colors duration-200">
+                            Can you design lighting for outdoor water features?
+                        </summary>
+                        <div class="p-5 text-gray-600 border-t border-gray-200 bg-white">
+                            <p>Yes. We have specialized experience in designing, installing, and maintaining custom lighting systems for hotel ponds, decorative fountains, and outdoor water features, using safe, waterproof, and energy-efficient fixtures.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-4 text-center">
+        <p class="mb-4">&copy; Machinoza Engineering. All rights reserved.</p>
+        <div class="flex justify-center space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                <p>Electrical & Automation Services - Sri Lanka</p>
+<p>Phone: +94 76 425 7864</p>
+        </div>
+    </div>
+</footer>
+
+<div class="fixed right-4 bottom-4 z-50 flex flex-col items-center opacity-80">
+      <a href="https://wa.me/94764257864" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full bg-green-500 text-white shadow-lg mb-3 hover:bg-green-600 transition duration-300" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+        <a href="https://www.facebook.com/share/163ArFdaGNr/" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white shadow-lg mb-3 hover:bg-blue-700 transition duration-300" aria-label="Visit us on Facebook">
+            <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="https://www.instagram.com/mach.inoza?igsh=MW5qYnc3enh1MTdlaw==" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full bg-pink-600 text-white shadow-lg mb-3 hover:bg-pink-700 transition duration-300" aria-label="Visit us on Instagram">
+            <i class="fab fa-instagram text-xl"></i>
+        </a>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM Content Loaded');
+
+        // Mobile Menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Hero Image Slider functionality
+        const heroSlides = document.querySelectorAll('.slider-container .slide');
+        let currentHeroSlide = 0;
+
+        function showHeroSlide(index) {
+            heroSlides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+        function nextHeroSlide() {
+            if (heroSlides.length > 0) {
+                currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+                showHeroSlide(currentHeroSlide);
+            }
+        }
+
+        showHeroSlide(currentHeroSlide);
+        setInterval(nextHeroSlide, 5000);
+    });
+</script>
+</body>
+</html>

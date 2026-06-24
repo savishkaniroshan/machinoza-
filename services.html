@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machinoza Engineering (PVT) LTD | Electrical, Automation & CCTV Services Sri Lanka</title>
+    <meta name="description" content="Explore Machinoza's comprehensive services including electrical wiring, security systems, smart home automation, plumbing, and custom fountain lighting.">
+    <meta name="keywords" content="machinoza services, electrical company, security company, automation company, Sri Lanka, plumbing, fountain lighting,electrician near colombo,machinoza,electrical company,m">
+    <meta name="author" content="Machinoza">
+    <meta property="og:title" content="Machinoza Services - Innovative Electrical & Automation Solutions">
+    <meta property="og:description" content="Discover our dedication to quality in electrical, security, plumbing, and automation services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://machinoza.com/services.html"> 
+    <meta property="og:image" content="logo.jpg"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Font - Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; 
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+        /* --- Modern Tech Font & Professional Animation --- */
+        .tech-font {
+            font-family: 'Orbitron', sans-serif; 
+            letter-spacing: 0.15em;
+        }
+
+        @keyframes professionalFocus {
+            0%, 20%, 100% { 
+                transform: translateY(0) scale(1);
+                color: #374151; 
+                text-shadow: none;
+            }
+            7%, 13% { 
+                transform: translateY(-4px) scale(1.05); 
+                color: #2563eb; 
+                text-shadow: 0 0 15px rgba(37, 99, 235, 0.4); 
+            }
+        }
+
+        .animate-word {
+            display: inline-block;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: professionalFocus 10s infinite;
+        }
+
+        .word-1 { animation-delay: 0s; }
+        .word-2 { animation-delay: 2.5s; }
+        .word-3 { animation-delay: 5s; }
+        .word-4 { animation-delay: 7.5s; }
+
+        /* --- MODAL & IMAGE CSS --- */
+        .service-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .modal-overlay {
+            display: none; 
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 2.5rem;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .modal-overlay.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            line-height: 1;
+            color: #4b5563;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close-button:hover {
+            color: #ef4444; 
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            max-height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+<header class="bg-white shadow-lg py-4 sticky top-0 z-50">
+    <nav class="container mx-auto px-4 flex justify-between items-center">
+
+        <div class="flex items-center gap-1">
+            <a href="index.html">
+                <img src="asserts/logo.png" alt="Machinoza Logo" class="h-12 md:h-16 w-auto" onerror="this.src='https://placehold.co/150x50/ffffff/000000?text=LOGO'">
+            </a>
+
+            <div class="border-l-4 border-blue-600 pl-4 md:pl-6 ml-2">
+                <h1 class="text-base md:text-xl font-bold uppercase tech-font leading-tight flex flex-wrap">
+                    <span class="animate-word word-1 mr-2 md:mr-3">Machinoza</span>
+                    <span class="animate-word word-2 mr-2 md:mr-3">Engineering</span>
+                    <span class="animate-word word-3 text-blue-600 mr-2 md:mr-3">PVT</span>
+                    <span class="animate-word word-4 text-blue-600">LTD</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-blue-700 font-medium transition duration-300">Home</a>
+            <a href="services.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Services</a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Projects</a>
+            <a href="about.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">About Us</a>
+            <a href="contact.html" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Contact</a>
+        </div>
+
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-md">
+        <a href="index.html" class="block px-4 py-2 text-blue-700 hover:bg-gray-100">Home</a>
+        <a href="services.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Services</a>
+        <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Projects</a>
+        <a href="about.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About Us</a>
+        <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+    </div>
+</header>
+    <main class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-16 md:py-24">
+        <section id="services-grid" class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <div class="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-xl hover:scale-105 overflow-hidden">
+                    <img src="asserts/s2.jpg" alt="Electrical Services Image" class="service-card-image" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Image'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Electrical Services</h3>
+                        <p class="text-gray-700 mb-6">
+                            Comprehensive electrical wiring, installations, maintenance, and fault finding for domestic and industrial sectors. Ensuring safety and efficiency.
+                        </p>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 open-modal-btn" data-service="electrical">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-xl hover:scale-105 overflow-hidden">
+                    <img src="asserts/cctv.jpg" alt="Security Systems Image" class="service-card-image" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Image'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Security Systems</h3>
+                        <p class="text-gray-700 mb-6">
+                            State-of-the-art CCTV surveillance, alarm systems, access control, and video door phones for enhanced safety and monitoring.
+                        </p>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 open-modal-btn" data-service="security">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-xl hover:scale-105 overflow-hidden">
+                    <img src="asserts/a1.png" alt="Automation Solutions Image" class="service-card-image" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Image'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Automation Solutions</h3>
+                        <p class="text-gray-700 mb-6">
+                            Transform your living and working spaces into intelligent environments with our bespoke automation solutions, enhancing comfort, convenience, and efficiency.
+                        </p>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 open-modal-btn" data-service="automation">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-xl hover:scale-105 overflow-hidden">
+                    <img src="asserts/a1.png" alt="Smart Home Image" class="service-card-image" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Image'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Smart Home</h3>
+                        <p class="text-gray-700 mb-6">
+                            Upgrade your lifestyle with intelligent home automation-control lighting, security, and appliances effortlessly for greater comfort, convenience, and energy efficiency.
+                        </p>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 open-modal-btn" data-service="smarthome">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-xl hover:scale-105 overflow-hidden">
+                    <img src="asserts/pa1.jpg" alt="PA Sound Systems Image" class="service-card-image" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Image'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">PA Sound Systems</h3>
+                        <p class="text-gray-700 mb-6">
+                            Design and installation of public address systems for offices, schools, factories, and public spaces, ensuring clear audio delivery.
+                        </p>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 open-modal-btn" data-service="pa_sound">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-xl hover:scale-105 overflow-hidden">
+                    <img src="asserts/n1.png" alt="Networking Image" class="service-card-image" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Image'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Networking & Communication</h3>
+                        <p class="text-gray-700 mb-6">
+                            Robust data and voice networking solutions, including cabling, Wi-Fi setups, and intercommunication systems for seamless connectivity.
+                        </p>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 open-modal-btn" data-service="networking">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-xl hover:scale-105 overflow-hidden">
+                    <img src="asserts/led.png" alt="LED Sign Boards Image" class="service-card-image" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Image'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">LED Sign Boards</h3>
+                        <p class="text-gray-700 mb-6">
+                            Custom design and installation of vibrant LED sign boards for advertising, informational displays, and branding.
+                        </p>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 open-modal-btn" data-service="led_sign">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+               <div class="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-xl hover:scale-105 overflow-hidden">
+                    <img src="asserts/pond.png" alt="Fountain & Pond Lighting" class="service-card-image" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Image'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Fountain & Pond Lighting</h3>
+                        <p class="text-gray-700 mb-6">
+                           Bring your pond or fountain to life with vibrant, waterproof LED lighting. Our professional lighting designs enhance the beauty of water features at night.
+                        </p>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 open-modal-btn" data-service="fountain">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+              
+                 <div class="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-xl hover:scale-105 overflow-hidden">
+                    <img src="asserts/p1.png" alt="plubing service image" class="service-card-image" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Image'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Plumbing Service</h3>
+                        <p class="text-gray-700 mb-6">
+                            Expert plumbing solutions for new constructions, renovations, and repairs. We handle all your residential and commercial plumbing needs.
+                        </p>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 open-modal-btn" data-service="plumbing">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="project-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="modal-close-button">&times;</button>
+                <h3 id="modal-title" class="text-3xl font-bold text-blue-700 mb-6"></h3>
+                
+                <img id="modal-image" src="" alt="Project Image" class="project-image">
+                
+                <p id="modal-description" class="text-gray-700 leading-relaxed mb-4"></p>
+                <ul id="modal-features" class="list-disc list-inside text-gray-700 mb-4"></ul>
+                <p id="modal-benefits" class="text-gray-700 font-semibold"></p>
+                
+                <div class="text-center mt-6">
+                    <a id="modal-contact-link" href="#" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">
+                        Get a Quote for this Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-4 text-center">
+        <p class="mb-4">&copy; Machinoza Engineering. All rights reserved.</p>
+        <div class="flex justify-center space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                <p>Electrical & Automation Services - Sri Lanka</p>
+<p>Phone: +94 76 425 7864</p>
+        </div>
+    </div>
+</footer>
+
+
+    <div class="fixed right-4 bottom-4 z-50 flex flex-col items-center opacity-80">
+         <a href="https://wa.me/94764257864" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full bg-green-500 text-white shadow-lg mb-3 hover:bg-green-600 transition duration-300" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+        <a href="https://www.facebook.com/share/163ArFdaGNr/" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white shadow-lg mb-3 hover:bg-blue-700 transition duration-300" aria-label="Visit us on Facebook">
+            <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="https://www.instagram.com/mach.inoza?igsh=MW5qYnc3enh1MTdlaw==" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full bg-pink-600 text-white shadow-lg mb-3 hover:bg-pink-700 transition duration-300" aria-label="Visit us on Instagram">
+            <i class="fab fa-instagram text-xl"></i>
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            const projectModal = document.getElementById('project-modal');
+            const modalCloseButton = projectModal.querySelector('.modal-close-button');
+            const openModalButtons = document.querySelectorAll('.open-modal-btn');
+            const modalTitle = document.getElementById('modal-title');
+            const modalImage = document.getElementById('modal-image');
+            const modalDescription = document.getElementById('modal-description');
+            const modalFeatures = document.getElementById('modal-features');
+            const modalBenefits = document.getElementById('modal-benefits');
+            const modalContactLink = document.getElementById('modal-contact-link');
+
+            const whatsappNumber = '94764257864'; 
+
+            const serviceDetails = {
+                electrical: {
+                    title: "Electrical Services Expertise", image: "asserts/service1.jpg", 
+                    description: "Our comprehensive electrical services cover everything from new installations to maintenance and troubleshooting for homes and businesses.",
+                    features: ["New Electrical Wiring & Rewiring", "Panel Upgrades & Circuit Breakers", "Lighting Installation (Indoor & Outdoor)", "Generator & UPS Installation", "Fault Finding & Repairs", "Energy Audits & Efficiency Solutions"],
+                    benefits: "Enjoy safe, reliable, and efficient electrical systems tailored to your needs. Reduce energy costs and prevent electrical hazards."
+                },
+                security: {
+                    title: "Advanced Security Systems", image: "asserts/service2.jpg", 
+                    description: "Protect your property with our cutting-edge security solutions, designed for peace of mind and comprehensive surveillance.",
+                    features: ["CCTV Surveillance Systems (Analog & IP)", "Alarm Systems (Burglar & Fire)", "Access Control Systems (Biometric, Card Reader)", "Video Door Phones & Intercoms", "Perimeter Security Solutions", "24/7 Monitoring Integration"],
+                    benefits: "Deter crime, monitor activity remotely, and ensure the safety of your loved ones and assets with our reliable security systems."
+                },
+                automation: {
+                    title: "Automation Solutions", image: "asserts/service3.jpg", 
+                    description: "Transform your industry, garden or farm into a smart and efficient environment with our customized automation solutions.designed to enhance comfort, convenience, and productivity through intelligent control and seamless operation.",
+                    features: ["Industrial Automation Solutions", "Garden Automation Solutions", "Domestic Water Supply Automation Solutions", "Agricultural Automation Solutions"],
+                    benefits: "Experience smart control, zsave energy, and boost efficiency with our advanced automation solutions."
+                },
+                smarthome: {
+                    title: "Smart Home", image: "asserts/sh.jpg", 
+                    description: "Upgrade your lifestyle with intelligent home automation - control lighting, security, and appliances effortlessly for greater comfort, convenience, and energy efficiency.",
+                    features: ["Smart Light Switch", "Gate Automation", "Domestic Water Pump Automation", "Home Garden Automation"],
+                    benefits: "Enjoy seamless living, improved safety, and energy savings with smart technology at your fingertips."
+                },
+                pa_sound: {
+                    title: "Professional PA Sound Systems", image: "asserts/s5.jpg",
+                    description: "We design and install high-quality Public Address (PA) and background music systems for various environments, ensuring crystal-clear audio.",
+                    features: ["Commercial & Industrial PA Systems", "School & Auditorium Sound Systems", "Paging & Announcement Systems", "Background Music Systems"],
+                    benefits: "Enhance communication, create ambient atmospheres, and ensure your message is heard clearly in any setting."
+                },
+                networking: {
+                    title: "Reliable Networking & Communication", image: "asserts/s6.jpg", 
+                    description: "Build robust and seamless data and voice communication networks with our expert cabling and connectivity solutions.",
+                    features: ["Structured Cabling (CAT6)", "Wi-Fi & Wireless Network Setup", "VoIP & Intercom Systems", "Network Rack & Server Room Setup", "Network Troubleshooting & Maintenance"],
+                    benefits: "Ensure fast, secure, and reliable connectivity for all your devices and communication needs, boosting productivity."
+                },
+                led_sign: {
+                    title: "Custom LED Sign Boards", image: "asserts/led.jpg", 
+                    description: "Attract attention and convey your message effectively with our custom-designed and installed LED sign boards for various applications.",
+                    features: ["Indoor sign board/ Outdoor sign board", "Portable / Temporary sign board", "Singal colour / Two colour / RGB all kind of LED sign board", "DJ vedio wall (Pixel LED)"],
+                    benefits: "Boost your brand visibility, inform customers dynamically, and enhance your premises with vibrant, eye-catching LED signage."
+                },
+                fountain: {
+                    title: "Fountain & Pond Lighting Service", image: "asserts/f.jpg", 
+                    description: "Bring your water feature to life after dark with our complete lighting solutions. We manage the entire lifecycle of your underwater system to ensure safety and brilliance.",
+                    features: ["Installation", "Maintenance & Cleaning", "Repair & Troubleshooting", "Smart Tech & Upgrades"],
+                    benefits: "Ensure a safe, stunning, and energy-efficient water feature with our expert design and care services."
+                },
+                plumbing: {
+                    title: "Plumbing Service", image: "asserts/ps.png", 
+                    description: "We provide professional advanced plumbing services using modern equipment and industry-standard techniques to ensure long-lasting and reliable results.",
+                    features: ["Drain block cleaning (machine cleaning)", "Leak detection", "High-pressure water jet cleaning", "Pipe installation & repairs", "Bathroom & kitchen plumbing", "Water pump installation", "Hot & cold water systems", "Emergency plumbing services"],
+                    benefits: "We use advanced modern machinery and experienced technicians to deliver fast, reliable, and high-quality plumbing services at affordable prices with guaranteed workmanship."
+                }
+            };
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const serviceType = this.dataset.service;
+                    const details = serviceDetails[serviceType];
+
+                    if (details) {
+                        modalTitle.textContent = details.title;
+                        modalImage.src = details.image; 
+                        modalDescription.textContent = details.description;
+                        modalBenefits.textContent = "Benefits: " + details.benefits;
+
+                        modalFeatures.innerHTML = '';
+                        details.features.forEach(feature => {
+                            const li = document.createElement('li');
+                            li.textContent = feature;
+                            modalFeatures.appendChild(li);
+                        });
+
+                        const currentPageUrl = window.location.href;
+                        const encodedMessage = encodeURIComponent(`Hello Machinoza, I'm interested in your ${details.title}. You can find this service on your website at: ${currentPageUrl}. Could you please provide a quote or more information?`);
+                        modalContactLink.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+                        projectModal.classList.add('show');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            modalCloseButton.addEventListener('click', function() {
+                projectModal.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+
+            projectModal.addEventListener('click', function(event) {
+                if (event.target === projectModal) {
+                    projectModal.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
